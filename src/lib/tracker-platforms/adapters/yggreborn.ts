@@ -55,7 +55,7 @@ async function fetchAccountHtml(baseUrl: string, apiToken: string, apiPath: stri
     label: "YGG Reborn",
     sessionExpiredMessage: "YGG Reborn: session expired, paste fresh browser cookies",
     proxyAgent: options?.proxyAgent,
-    flaresolverr: options?.flaresolverr,
+    flaresolverr: options?.flaresolverr ? { config: options.flaresolverr } : undefined,
   })
 }
 
