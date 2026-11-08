@@ -267,6 +267,32 @@ export const CREDENTIAL_FORMS = {
 
   v3x: tokenForm("Your V3X API key with « Mon profil (lecture) »", true),
 
+  yggreborn: {
+    kind: "cookies",
+    example: "ygg_session=...",
+    extraCookieNames: ["ygg_session", "laravel_session", "remember_web"],
+    hidesJoinDate: true,
+    dialog: {
+      secret: {
+        label: "Browser Cookies",
+        tooltip:
+          "YGG Reborn has no stats API, so stats are read from your account page. Open DevTools (F12) → Network → the request to /account/ → copy the full Cookie header value.",
+        docs: true,
+        placeholder: "ygg_session=...",
+        rows: 3,
+      },
+    },
+    sheet: {
+      secret: {
+        label: "Browser Cookies",
+        tooltip: "Open DevTools (F12) → Network → /account/ → copy the full Cookie header value.",
+        docs: true,
+        placeholder: "ygg_session=...",
+        rows: 3,
+      },
+    },
+  },
+
   retrotoon: {
     kind: "cookies",
     example: "PHPSESSID=abc123def456",
