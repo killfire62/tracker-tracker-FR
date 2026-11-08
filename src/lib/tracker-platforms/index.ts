@@ -27,6 +27,7 @@ import { TorrentleechAdapter } from "./adapters/torrentleech"
 import { Tr4kerAdapter } from "./adapters/tr4ker"
 import { Unit3dAdapter } from "./adapters/unit3d"
 import { V3xAdapter } from "./adapters/v3x"
+import { YggRebornAdapter } from "./adapters/yggreborn"
 import type { FetchOptions, FlareSolverrConfig, TrackerAdapter } from "./contract"
 
 const adapters: Record<string, TrackerAdapter> = {
@@ -50,6 +51,7 @@ const adapters: Record<string, TrackerAdapter> = {
   tr4ker: new Tr4kerAdapter(),
   v3x: new V3xAdapter(),
   unit3d: new Unit3dAdapter(),
+  yggreborn: new YggRebornAdapter(),
 }
 
 export function getAdapter(platformType: string): TrackerAdapter {

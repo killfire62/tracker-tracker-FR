@@ -11,12 +11,13 @@ name: tracker-tracker
 
 services:
   tracker-tracker-app:
-    image: ghcr.io/jordanlambrecht/tracker-tracker:latest
+    image: tracker-tracker:custom
     restart: unless-stopped
     container_name: tracker-tracker-app
     ports:
       - "${PORT:-3000}:3000" # Smokey the Bear says: "Remember friends, you don't need to expose your port if it sits behind a reverse proxy!"
     environment:
+      HOMEPAGE_TOKEN: ${HOMEPAGE_TOKEN}
       POSTGRES_HOST: tracker-tracker-db
       # POSTGRES_PORT: ${POSTGRES_PORT} uncomment if you change the default port in the db service
       POSTGRES_USER: ${POSTGRES_USER}

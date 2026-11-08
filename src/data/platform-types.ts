@@ -22,6 +22,7 @@ export const VALID_PLATFORM_TYPES = [
   "rutracker",
   "funfile",
   "v3x",
+  "yggreborn",
 ] as const
 export type PlatformType = (typeof VALID_PLATFORM_TYPES)[number]
 
@@ -51,6 +52,7 @@ export const DEFAULT_API_PATHS: Record<string, string> = {
   rutracker: "/forum/index.php",
   funfile: "/userdetails.php",
   v3x: "/api/me",
+  yggreborn: "/account/",
 }
 
 /**

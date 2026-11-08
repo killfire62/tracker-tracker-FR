@@ -2,6 +2,7 @@
 import type { Metadata } from "next"
 import { Archivo, Space_Mono } from "next/font/google"
 import type { ReactNode } from "react"
+import { TraductionFR } from "@/components/TraductionFR"
 import "./globals.css"
 
 const archivo = Archivo({
@@ -28,11 +29,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="fr" className="dark">
       <body
         className={`${archivo.variable} ${spaceMono.variable} font-sans antialiased bg-base text-primary`}
       >
         {children}
+        <TraductionFR />
       </body>
     </html>
   )
